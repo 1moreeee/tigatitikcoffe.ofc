@@ -1,0 +1,544 @@
+/* PALET WARNA (Hitam/Kopi Tua, Emas, Putih Bersih) */
+:root {
+    --color-primary: #1a1a1a; /* Hitam Pekat / Kopi Sangat Tua */
+    --color-secondary: #D4AF37; /* Emas Metallic */
+    --color-accent: #996515; /* Coklat Keemasan */
+    --color-light: #F7F7F7; /* Putih Bersih / Off-White */
+    --color-text: #333333;
+}
+
+/* RESET DASAR & TYPOGRAPHY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ELEGANT HEADINGS */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
+
+/* --- HEADER & NAVIGASI --- */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header .container {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+    margin-left: 0;
+}
+
+nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-secondary);
+}
+
+.btn-nav {
+    background-color: var(--color-secondary);
+    color: var(--color-primary) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* --- TOMBOL (BUTTONS) --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.btn-cta { /* Tombol Order Utama WhatsApp */
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    font-size: 1.2em;
+    padding: 15px 40px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-cta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.btn-cta-secondary {
+    background-color: transparent;
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+}
+.btn-cta-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    /* MENGGUNAKAN FOTO CHOCUCINO SEBAGAI LATAR BELAKANG */
+    background: url('https://scontent-cgk2-1.cdninstagram.com/v/t51.2885-15/448208753_18042502621941865_8604344552467975878_n.jpg?stp=dst-jpg_s150x150&_nc_ht=scontent-cgk2-1.cdninstagram.com&_nc_cat=103&_nc_ohc=y7m_pU72Q-0Q7kNvwF80L13&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfB82lO82_3tB3Vv6t-Oa1q9P7V0wV91P8Y3W9q6q60T_Q&oe=69123898&_nc_sid=22de04') center/cover no-repeat; 
+    background-attachment: fixed;
+    height: 85vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-light);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65); /* Sedikit lebih gelap agar teks putih lebih kontras */
+    z-index: 0; 
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.tagline-kecil {
+    color: var(--color-secondary);
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+.tagline-besar {
+    font-size: 4em;
+    color: var(--color-light);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* --- SECTION UMUM --- */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* --- FILOSOFI & PRODUK SECTION --- */
+.filosofi-section {
+    background-color: var(--color-light);
+}
+
+.filosofi-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    padding: 0 15px;
+    color: var(--color-text);
+}
+
+/* Tambahan CSS untuk PILAR FILOSOFI (Kartu Mewah) */
+.filosofi-pilar-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; 
+}
+
+.pilar-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.333% - 20px);
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--color-secondary); /* Garis emas premium */
+}
+
+.pilar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.pilar-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-accent); /* Coklat Keemasan */
+    font-size: 1.25em;
+    margin-bottom: 15px;
+}
+
+.pilar-desc {
+    font-size: 0.95em;
+    color: #555;
+}
+
+
+.produk-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.produk-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    flex-basis: calc(50% - 30px);
+    max-width: 450px;
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
+
+.produk-item:hover {
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3); 
+}
+
+.produk-item h4 {
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.tagline-produk {
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* --- MENU KOPI & HARGA SECTION (BARU) --- */
+.menu-kopi-section {
+    background-color: var(--color-light); 
+    padding: 60px 0;
+}
+
+.menu-kopi-section h3 {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.sub-heading-menu {
+    color: var(--color-text);
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* Grouping untuk Kategori Menu (Tiga Titik, Nescafe, dll.) */
+.menu-category-group {
+    margin-bottom: 50px;
+    padding: 0 15px;
+    border-left: 5px solid var(--color-accent);
+    text-align: left;
+}
+
+.menu-category-group h4 {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border-bottom: 1px dashed rgba(26, 26, 26, 0.2);
+    padding-bottom: 5px;
+}
+
+.menu-kopi-grid {
+    display: flex;
+    justify-content: flex-start; /* Alignment ke kiri */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-item-kopi {
+    flex-basis: 220px;
+    max-width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--color-secondary); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Teks menu rata kiri */
+}
+
+.menu-item-kopi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.4); 
+}
+
+.menu-item-kopi h4 {
+    color: var(--color-accent);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.menu-item-kopi .desc {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 15px;
+    min-height: 80px; 
+}
+
+.price-tag {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.price-tag strong {
+    color: var(--color-secondary); 
+}
+
+.note-order {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* --- CTA SECTION --- */
+.cta-order-section {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 60px 0;
+}
+
+.cta-order-section h2 {
+    color: var(--color-secondary);
+}
+
+/* --- INFO DAN FAQ SECTION --- */
+.info-faq-section {
+    background-color: var(--color-light); 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.info-faq-section h3 {
+    margin-bottom: 40px;
+    color: var(--color-primary);
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.info-kolom {
+    flex-basis: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid rgba(26, 26, 26, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-kolom h4 {
+    color: var(--color-accent);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.info-kolom ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-kolom li {
+    margin-bottom: 8px;
+}
+
+.faq-q {
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 15px;
+}
+
+.faq-a {
+    margin-bottom: 20px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 20px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--color-secondary); 
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: var(--color-light);
+}
+
+
+/* --- RESPONSIVENESS (Mobile-Friendly) --- */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        display: inline-block; 
+    }
+
+    .tagline-besar {
+        font-size: 2em; 
+    }
+
+    .hero {
+        height: 70vh;
+    }
+    
+    .filosofi-pilar-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pilar-card {
+        flex-basis: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .produk-list {
+        gap: 20px;
+    }
+    
+    .produk-item {
+        flex-basis: 100%; 
+        padding: 20px;
+    }
+
+    .menu-kopi-grid {
+        gap: 20px;
+    }
+    
+    .menu-item-kopi {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    
+    .menu-item-kopi .desc {
+        min-height: auto; 
+    }
+
+    .btn-cta, .btn-cta-secondary {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .info-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-kolom {
+        flex-basis: 100%;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer p, .social-links {
+        margin: 5px 0;
+    }
+}
